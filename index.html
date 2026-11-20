@@ -1,75 +1,82 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Saika — Gameplay Designer</title><meta name="description" content="Gameplay designer. A ten-year card game, a two-key rhythm game, a narrative game and a stack of one-week prototypes — most of them playable in the browser."><meta name="theme-color" content="#07080B">
+<title>Saika — Gameplay Designer</title><meta name="description" content="Gameplay designer. A ten-year card game, a two-key rhythm game, a narrative game and a stack of one-week prototypes — most of them playable in the browser."><meta name="theme-color" content="#05060A">
 <meta property="og:title" content="Saika — Gameplay Designer"><meta property="og:description" content="Gameplay designer. A ten-year card game, a two-key rhythm game, a narrative game and a stack of one-week prototypes — most of them playable in the browser.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap"><link rel="stylesheet" href="assets/site.css"></head><body>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0 L11.6 8.4 L20 10 L11.6 11.6 L10 20 L8.4 11.6 L0 10 L8.4 8.4Z' fill='%235FE3A8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap"><link rel="stylesheet" href="assets/site.css"></head><body>
+<canvas id="sky" aria-hidden="true" data-strength="1"></canvas><div class="grid" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav"><div class="wrap"><a class="brand" href="index.html"><span class="dot"></span><b>Saika</b><span>Ying Luo</span></a>
+<header class="nav"><div class="wrap"><a class="brand" href="index.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 L11.6 8.4 L20 10 L11.6 11.6 L10 20 L8.4 11.6 L0 10 L8.4 8.4Z" fill="#5FE3A8"/></svg><b>Saika</b><span>Ying Luo</span></a>
 <nav aria-label="Main"><a href="index.html#work">Work</a><a href="index.html#prototypes">Prototypes</a><a href="index.html#credits">Credits</a><a href="index.html#about">About</a><a class="cv" href="index.html#contact">Contact</a></nav></div></header>
-<div class="projector" aria-hidden="true"><video muted loop playsinline preload="none"></video></div>
 <main id="main" class="wrap">
-<section class="hero">
-<span class="lab">Gameplay designer · USC Games</span>
-<h1 style="margin-top:20px">I build what I want to play, then play it until I can say what's <em>wrong</em> with it.</h1>
-<p class="lede">That second part is the job. Below: a card game I have run, broken and rewritten for ten years, and the smaller games I made while learning how to do it — 6 of them playable right here in the browser.</p>
-<div class="tldr"><div><span class="lab">Focus</span><b>Gameplay &amp; rules</b></div><div><span class="lab">Engine</span><b>Unity · Unreal</b></div><div><span class="lab">Playable here</span><b>6 games</b></div><div><span class="lab">Graduating</span><b>USC Games</b></div></div>
+<section class="hero" style="padding-top:40px">
+<div><span class="lab">Gameplay designer · USC Games</span>
+<h1>I build what I want to play, then play it until I can say what's <em>wrong</em> with it.</h1>
+<p class="lede">That second part is the job. A card game I have run, broken and rewritten for ten years, and the smaller games I made while learning how to do it — 6 of them playable right here.</p>
+<div class="status"><span class="pulse"></span><span>6 builds online · every star is a game</span></div></div>
+<div class="chart"><svg viewBox="0 0 600 600" id="chart" role="group" aria-label="Star chart: each star is a game. Select one to open it.">
+<defs><radialGradient id="halo"><stop offset="0" stop-color="#5FE3A8" stop-opacity=".55"/><stop offset=".4" stop-color="#3FC7D9" stop-opacity=".12"/><stop offset="1" stop-color="#3FC7D9" stop-opacity="0"/></radialGradient>
+<radialGradient id="core"><stop offset="0" stop-color="#5FE3A8" stop-opacity=".16"/><stop offset="1" stop-color="#5FE3A8" stop-opacity="0"/></radialGradient></defs>
+<circle cx="300" cy="300" r="290" fill="url(#core)"/><g class="rot" id="ticks"></g>
+<g class="rot rev"><circle class="ring" cx="300" cy="300" r="214" stroke-dasharray="2 6"/></g>
+<circle class="ring" cx="300" cy="300" r="150"/><circle class="ring" cx="300" cy="300" r="78" stroke-opacity=".6"/>
+<line x1="300" y1="0" x2="300" y2="600" class="ring" stroke-opacity=".5"/><line x1="0" y1="300" x2="600" y2="300" class="ring" stroke-opacity=".5"/>
+<g id="dust"></g><g id="lines"></g><g id="stars"></g></svg>
+<div class="readout" id="readout">8 objects · hover to read</div>
+<script type="application/json" id="chart-data">[{"name": "Astery Gate", "n": "01", "x": 300, "y": 300, "a": "end", "big": true, "href": "work/astery-gate.html"}, {"name": "Flare", "n": "02", "x": 410, "y": 190, "a": "start", "big": false, "href": "work/flare.html"}, {"name": "Achromatic", "n": "03", "x": 478, "y": 330, "a": "start", "big": false, "href": "work/achromatic.html"}, {"name": "DigFlow", "n": "04", "x": 388, "y": 452, "a": "start", "big": false, "href": "work/digflow.html"}, {"name": "SnowTurf", "n": "05", "x": 228, "y": 470, "a": "end", "big": false, "href": "work/snowturf.html"}, {"name": "Nocturne", "n": "06", "x": 132, "y": 356, "a": "end", "big": false, "href": "work/nocturne.html"}, {"name": "Lumen", "n": "07", "x": 168, "y": 186, "a": "end", "big": false, "href": "work/lumen.html"}, {"name": "Lodestar", "n": "08", "x": 262, "y": 102, "a": "end", "big": false, "href": "work/lodestar.html"}]</script></div>
 </section>
+<div class="tldr"><div><span class="lab">Focus</span><b>Gameplay &amp; rules</b></div><div><span class="lab">Engine</span><b>Unity · Unreal</b></div><div><span class="lab">Playable here</span><b>6 games</b></div><div><span class="lab">Graduating</span><b>USC Games</b></div></div>
 
 <section id="work">
-<div class="shead"><h2>Flagship</h2><span class="lab">Own IP · since 2016</span></div>
-<a class="flag" href="work/astery-gate.html"><div class="art"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>
-<linearGradient id="cb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E9BF0" stop-opacity=".42"/><stop offset="1" stop-color="#5E9BF0" stop-opacity=".03"/></linearGradient>
-<linearGradient id="cr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0574A" stop-opacity=".42"/><stop offset="1" stop-color="#E0574A" stop-opacity=".03"/></linearGradient></defs>
-<g transform="translate(470,690)"><g transform="rotate(-22)"><rect x="-80" y="-520" width="160" height="240" rx="6" fill="url(#cb)" stroke="#5E9BF0" stroke-opacity=".5"/></g><g transform="rotate(-8)"><rect x="-80" y="-546" width="160" height="240" rx="6" fill="url(#cb)" stroke="#5E9BF0" stroke-opacity=".8"/></g></g>
-<g transform="translate(730,690)"><g transform="rotate(22)"><rect x="-80" y="-520" width="160" height="240" rx="6" fill="url(#cr)" stroke="#E0574A" stroke-opacity=".5"/></g><g transform="rotate(8)"><rect x="-80" y="-546" width="160" height="240" rx="6" fill="url(#cr)" stroke="#E0574A" stroke-opacity=".8"/></g></g>
-<line x1="600" y1="60" x2="600" y2="540" stroke="#5FE3A8" stroke-opacity=".25" stroke-dasharray="3 8"/></svg></div>
-<div class="body"><span class="lab">01 · Card battler · 2v2</span><h3>Astery Gate</h3>
+<div class="shead"><span class="idx">01</span><h2>Flagship</h2><span class="lab">Own IP · since 2016</span></div>
+<a class="flag" href="work/astery-gate.html"><div class="art"><svg class="agsky" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>
+<radialGradient id="agb" cx=".38" cy=".55" r=".45"><stop offset="0" stop-color="#5E9BF0" stop-opacity=".22"/><stop offset="1" stop-color="#5E9BF0" stop-opacity="0"/></radialGradient>
+<radialGradient id="agr" cx=".62" cy=".55" r=".45"><stop offset="0" stop-color="#E0574A" stop-opacity=".2"/><stop offset="1" stop-color="#E0574A" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="700" fill="#05060A"/><rect width="1200" height="700" fill="url(#agb)"/><rect width="1200" height="700" fill="url(#agr)"/>
+<g fill="#fff" data-stars="110" data-w="1200" data-h="700" data-seed="19"></g>
+<g stroke="#5FE3A8" stroke-opacity=".45" fill="none"><path d="M24 24 h18 M24 24 v18 M1176 24 h-18 M1176 24 v18 M24 676 h18 M24 676 v-18 M1176 676 h-18 M1176 676 v-18"/></g></svg>
+<video class="aglogo" data-once muted playsinline preload="auto" data-poster="media/asterygate-logo.jpg" aria-label="Astery Gate logo: a blue figure and a red figure, mirrored"><source src="media/asterygate-logo.mp4" type="video/mp4"></video></div>
+<div class="body"><span class="lab">Card battler · 2v2 · four players</span><h3>Astery Gate</h3>
 <p>Four players, one shared deck of 108. When you take damage, <em>you</em> choose whether it lands on your own life or the team's — and taking it pays you resources.</p>
 <p class="rule">We played that rule for ten years. It was in neither edition of the rulebook.</p>
 <span class="go">Read the case →</span></div></a>
 
-<div class="shead"><h2>Games</h2><span class="lab">Hover to watch · click to read and play</span></div>
-<ul class="rows"><li class="row"><a href="work/flare.html" data-reel="media/flare.mp4">
-<span class="num">02</span><span><h3>Flare</h3><span class="kind">Rhythm · Unity · 2026</span></span>
-<span class="hook">A rhythm game on two keys. One meter, one decision: when to spend it.</span><span class="tags"><em class="tag play">Playable</em></span>
-<img class="thumb" src="media/flare.jpg" alt="" loading="lazy" width="1280" height="720"></a></li><li class="row"><a href="work/achromatic.html" data-reel="media/achromatic.mp4">
-<span class="num">03</span><span><h3>Achromatic</h3><span class="kind">Rhythm platformer · Team · CTIN 532 · 2025</span></span>
-<span class="hook">Jump, crouch and dash, and hit the note on the beat — scored by Berklee composers.</span><span class="tags"><em class="tag">Team</em><em class="tag">Trailer</em></span>
-<img class="thumb" src="media/achromatic.jpg" alt="" loading="lazy" width="1280" height="720"></a></li></ul>
+<div class="shead" style="margin-top:96px"><span class="idx">02</span><h2>Games</h2><span class="lab">Hover to watch · click to read and play</span></div>
+<div class="cards"><a class="card" href="work/flare.html" data-reel="media/flare.mp4">
+<div class="media hud"><div class="screen"><img src="media/flare.jpg" alt="Flare gameplay" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div></div>
+<div class="meta"><div><span class="lab">Rhythm · Unity · 2026</span><h3>Flare</h3><p class="hook">A rhythm game on two keys. One meter, one decision: when to spend it.</p></div><div class="tags"><em class="tag play">Playable</em></div></div></a><a class="card" href="work/achromatic.html" data-reel="media/achromatic.mp4">
+<div class="media hud"><div class="screen"><img src="media/achromatic.jpg" alt="Achromatic gameplay" class="dim-img" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div></div>
+<div class="meta"><div><span class="lab">Rhythm platformer · Team · CTIN 532 · 2025</span><h3>Achromatic</h3><p class="hook">Jump, crouch and dash, and hit the note on the beat — scored by Berklee composers.</p></div><div class="tags"><em class="tag">Team</em><em class="tag">Trailer</em></div></div></a></div>
 </section>
 
 <section id="prototypes">
-<div class="shead"><h2>Weekly prototypes</h2><span class="lab">One week each</span><p class="note">Made one a week for a Unity course. The only brief I gave myself: make a game I hadn't played.</p></div>
-<ul class="rows"><li class="row"><a href="work/nocturne.html" data-reel="media/nocturne.mp4">
-<span class="num">04</span><span><h3>Nocturne</h3><span class="kind">Weekly prototype · Narrative · Unity · 2026</span></span>
-<span class="hook">A room, a locked cabinet, and three ways for the night to end.</span><span class="tags"><em class="tag play">Playable</em><em class="tag">1 week</em></span>
-<img class="thumb" src="media/nocturne.jpg" alt="" loading="lazy" width="1280" height="720"></a></li><li class="row"><a href="work/snowturf.html" data-reel="media/snowturf.mp4">
-<span class="num">05</span><span><h3>SnowTurf</h3><span class="kind">Weekly prototype · 2D · Unity · 2026</span></span>
-<span class="hook">Four snowballs, one field. Fresh snow makes you bigger; bigger makes you slower.</span><span class="tags"><em class="tag play">Playable</em><em class="tag">1 week</em></span>
-<img class="thumb" src="media/snowturf.jpg" alt="" loading="lazy" width="1280" height="720"></a></li><li class="row"><a href="work/lumen.html" data-reel="media/lumen.mp4">
-<span class="num">06</span><span><h3>Lumen</h3><span class="kind">Weekly prototype · 2D · Unity · 2026</span></span>
-<span class="hook">Light dissolves walls — but your own shadow keeps them shut.</span><span class="tags"><em class="tag play">Playable</em><em class="tag">1 week</em></span>
-<img class="thumb" src="media/lumen.jpg" alt="" loading="lazy" width="1280" height="720"></a></li><li class="row"><a href="work/lodestar.html" data-reel="media/lodestar.mp4">
-<span class="num">07</span><span><h3>Lodestar</h3><span class="kind">Weekly prototype · 3D · Unity · 2026</span></span>
-<span class="hook">You never touch the ball. You throw a star, and it follows.</span><span class="tags"><em class="tag play">Playable</em><em class="tag">1 week</em></span>
-<img class="thumb" src="media/lodestar.jpg" alt="" loading="lazy" width="1280" height="720"></a></li><li class="row"><a href="work/digflow.html" data-reel="media/digflow.mp4">
-<span class="num">08</span><span><h3>DigFlow</h3><span class="kind">Weekly prototype · 2D · Unity · 2026</span></span>
-<span class="hook">Dig the channel. The flood follows it.</span><span class="tags"><em class="tag play">Playable</em><em class="tag">1 week</em></span>
-<img class="thumb" src="media/digflow.jpg" alt="" loading="lazy" width="1280" height="720"></a></li></ul>
+<div class="shead"><span class="idx">03</span><h2>Weekly prototypes</h2><span class="lab">5 weeks · 5 games</span><p class="note">Made one a week for a Unity course. The only brief I gave myself: make a game I hadn't played.</p></div>
+<div class="track" aria-hidden="true"><span style="left:calc(10.00% - 3px)"></span><span style="left:calc(30.00% - 3px)"></span><span style="left:calc(50.00% - 3px)"></span><span style="left:calc(70.00% - 3px)"></span><span style="left:calc(90.00% - 3px)"></span></div>
+<div class="log"><a class="wk" href="work/digflow.html" data-reel="media/digflow.mp4"><div class="top"><span class="lab">Week 01</span><span class="lab">Playable</span></div>
+<div class="shot"><img src="media/digflow.jpg" alt="DigFlow gameplay" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div>
+<div class="txt"><h3>DigFlow</h3><p>Dig the channel. The flood follows it.</p></div></a><a class="wk" href="work/snowturf.html" data-reel="media/snowturf.mp4"><div class="top"><span class="lab">Week 02</span><span class="lab">Playable</span></div>
+<div class="shot"><img src="media/snowturf.jpg" alt="SnowTurf gameplay" class="dim-img" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div>
+<div class="txt"><h3>SnowTurf</h3><p>Four snowballs, one field. Fresh snow makes you bigger; bigger makes you slower.</p></div></a><a class="wk" href="work/nocturne.html" data-reel="media/nocturne.mp4"><div class="top"><span class="lab">Week 03</span><span class="lab">Playable</span></div>
+<div class="shot"><img src="media/nocturne.jpg" alt="Nocturne gameplay" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div>
+<div class="txt"><h3>Nocturne</h3><p>A room, a locked cabinet, and three ways for the night to end.</p></div></a><a class="wk" href="work/lumen.html" data-reel="media/lumen.mp4"><div class="top"><span class="lab">Week 04</span><span class="lab">Playable</span></div>
+<div class="shot"><img src="media/lumen.jpg" alt="Lumen gameplay" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div>
+<div class="txt"><h3>Lumen</h3><p>Light dissolves walls — but your own shadow keeps them shut.</p></div></a><a class="wk" href="work/lodestar.html" data-reel="media/lodestar.mp4"><div class="top"><span class="lab">Week 05</span><span class="lab">Playable</span></div>
+<div class="shot"><img src="media/lodestar.jpg" alt="Lodestar gameplay" loading="lazy" width="1280" height="720"><video muted loop playsinline preload="none"></video></div>
+<div class="txt"><h3>Lodestar</h3><p>You never touch the ball. You throw a star, and it follows.</p></div></a></div>
 </section>
 
 <section id="credits">
-<div class="shead"><h2>Credits</h2><span class="lab">Other people's games</span><p class="note">Where the work was judging play rather than authoring it.</p></div>
-<ul class="credits"><li><span class="yr">2026</span><div><b>GLO — Game as Live Ops, Juice Pod</b><p>Played the inherited build, named every place where the feel fell short, and broke those findings into tasks for the pod. Built the click feedback myself.</p></div><span class="role">Producer &amp; designer · Unreal</span></li><li><span class="yr">Pro</span><div><b>Honor of Kings — BTK (Blood Thirsty Kings)</b><p>Plays support as Saika on a professional roster, international server — one of few women playing at that level.</p></div><span class="role">Support · pro player</span></li><li><span class="yr">2020</span><div><b>VR bartender arcade — undergraduate capstone</b><p>Half a year, 3D, VR, arcade-cabinet form.</p></div><span class="role">Producer</span></li></ul>
+<div class="shead"><span class="idx">04</span><h2>Credits</h2><span class="lab">Other people's games</span><p class="note">Where the work was judging play rather than authoring it.</p></div>
+<ul class="credits"><li><span class="yr">2026</span><div><b>GLO — Game as Live Ops, Juice Pod</b><p>Played the inherited build, named every place where the feel fell short, and broke those findings into tasks for the pod. Built the click feedback myself.</p></div><span class="role">Producer &amp; designer · Unreal</span></li><li><span class="yr">Pro</span><div><b>Honor of Kings — BTK (Blood Thirsty Kings)</b><p>Plays support as Saika on a professional roster, international server — one of few women playing at that level.</p></div><span class="role">Support · pro player</span></li><li><span class="yr">2020</span><div><b>Double Shots — undergraduate capstone</b><p>A VR bartending game in 3D, made over half a year with a team. It was never released; the project is on GitHub. <a href="https://github.com/Dorisyluo/Doubleshots" target="_blank" rel="noopener">View on GitHub →</a></p></div><span class="role">Producer</span></li></ul>
 </section>
 
 <section id="about">
-<div class="shead"><h2>About</h2><span class="lab">Short version</span></div>
+<div class="shead"><span class="idx">05</span><h2>About</h2><span class="lab">Short version</span></div>
 <div class="about"><p class="big">The part I am good at is the part nobody wants: turning a game that only works when its designer is in the room into something somebody else can build.</p>
 <div><p>I am finishing my degree at USC Games, where I am producer and designer on a four-person team. I write the rules, keep the card data honest and run the playtests.</p>
 <p>My own games are 2D because of how 2D reads, not because of what I can build — my undergraduate capstone was a VR game in 3D. I also play support professionally in Honor of Kings, for BTK.</p>
 <ul class="contact" id="contact">
-<li><a href="mailto:dorisyingluo@gmail.com"><span class="lab">Email</span><span class="v2">dorisyingluo@gmail.com</span></a></li>
-<li><a href="https://github.com/Dorisyluo"><span class="lab">GitHub</span><span class="v2">github.com/Dorisyluo</span></a></li>
+<li><a class="hud" href="mailto:dorisyingluo@gmail.com"><span class="lab">Email</span><span class="v2">dorisyingluo@gmail.com</span></a></li>
+<li><a class="hud" href="https://github.com/Dorisyluo"><span class="lab">GitHub</span><span class="v2">github.com/Dorisyluo</span></a></li>
 </ul></div></div>
 </section>
 </main>

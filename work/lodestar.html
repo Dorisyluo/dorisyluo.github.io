@@ -1,22 +1,25 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Lodestar — Saika</title><meta name="description" content="Roll-a-Ball without the keyboard: you send stars, and a wandering light rolls after them to draw a constellation."><meta name="theme-color" content="#07080B">
+<title>Lodestar — Saika</title><meta name="description" content="Roll-a-Ball without the keyboard: you send stars, and a wandering light rolls after them to draw a constellation."><meta name="theme-color" content="#05060A">
 <meta property="og:title" content="Lodestar — Saika"><meta property="og:description" content="Roll-a-Ball without the keyboard: you send stars, and a wandering light rolls after them to draw a constellation.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap"><link rel="stylesheet" href="../assets/site.css"></head><body>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0 L11.6 8.4 L20 10 L11.6 11.6 L10 20 L8.4 11.6 L0 10 L8.4 8.4Z' fill='%235FE3A8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap"><link rel="stylesheet" href="../assets/site.css"></head><body>
+<canvas id="sky" aria-hidden="true" data-strength="0.6"></canvas><div class="grid" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav"><div class="wrap"><a class="brand" href="../index.html"><span class="dot"></span><b>Saika</b><span>Ying Luo</span></a>
+<header class="nav"><div class="wrap"><a class="brand" href="../index.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 L11.6 8.4 L20 10 L11.6 11.6 L10 20 L8.4 11.6 L0 10 L8.4 8.4Z" fill="#5FE3A8"/></svg><b>Saika</b><span>Ying Luo</span></a>
 <nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#prototypes">Prototypes</a><a href="../index.html#credits">Credits</a><a href="../index.html#about">About</a><a class="cv" href="../index.html#contact">Contact</a></nav></div></header>
 <main id="main">
 <header class="phero"><video data-loop autoplay muted loop playsinline preload="metadata" poster="../media/lodestar.jpg"><source src="../media/lodestar.mp4" type="video/mp4"></video>
-<div class="wrap"><a class="crumb" href="../index.html#work">← All work</a><span class="lab" style="display:block;margin-bottom:12px">Weekly prototype · 3D · Unity</span>
+<div class="frame hud" aria-hidden="true" style="--c:rgba(95,227,168,.5)"><span class="tl">Object 08 · 2026</span><span class="tr">Playable in browser</span></div>
+<div class="wrap"><a class="crumb" href="../index.html#prototypes">← All work</a><span class="lab" style="display:block;margin-bottom:12px">Weekly prototype · 3D · Unity</span>
 <h1>Lodestar</h1><p class="one">Roll-a-Ball without the keyboard: you send stars, and a wandering light rolls after them to draw a constellation.</p></div></header>
 <div class="wrap"><div class="facts"><div><span class="lab">Role</span><b>Solo</b></div><div><span class="lab">Made</span><b>2026</b></div><div><span class="lab">Length</span><b>One week</b></div><div><span class="lab">Runs on</span><b>Browser · PC</b></div></div>
 <div class="pbody"><aside><span class="lab">Controls</span><ul><li><span>Send a star</span><kbd>click</kbd></li><li><span>New sky</span><kbd>R</kbd></li><li><span>Start</span><kbd>Space / click</kbd></li></ul><span class="lab">Made with</span><ul><li><span>Unity</span></li><li><span>C#</span></li><li><span>Physics</span></li></ul></aside>
-<div class="prose"><h2>The brief</h2><div class="changed"><p style="color:var(--fg)">One week, for a Unity course. I set myself one rule: make a game I hadn't played before.</p></div><h2>Play it</h2><div class="stage" data-src="../play/lodestar/index.html" data-title="Lodestar">
+<div class="prose"><h2>The brief</h2><div class="changed hud"><p style="color:var(--fg)">One week, for a Unity course. I set myself one rule: make a game I hadn't played before.</p></div><h2>Play it</h2><div class="stage hud" data-src="../play/lodestar/index.html" data-title="Lodestar"><div class="screen">
 <img src="../media/lodestar.jpg" alt="" width="1280" height="720"><button type="button">Load Lodestar</button>
-<span class="hint">Loads the full game here (about 35 MB). Best on a computer.</span></div>
+<span class="hint">Loads the full game here (about 35 MB). Best on a computer.</span></div></div>
 <div class="stagebar"><span>Click to send a star. The wanderer rolls after it. Light every point; avoid the voids. R deals a new sky.</span><a href="../play/lodestar/index.html" target="_blank" rel="noopener">Open full screen →</a></div><h2>How it plays</h2><p>Click anywhere and a star flies out from the wanderer and settles where you pointed. The wanderer rolls after it — with momentum, so it overshoots, bounces off the walls and keeps rolling after the star goes out.</p><p>Roll through every point to light the constellation. Avoid the voids. You have eight stars; reach a star in time and you get it back. Every sky is scattered from a seed, and the constellation you draw — the order you lit it in — is named from the same seed.</p><h2>Indirect control</h2><p>You never push the wanderer. You place a target, and it chases. The question each click asks is where the wanderer will be when the star burns out.</p></div></div></div>
 <nav class="next wrap" aria-label="More work"><a href="lumen.html"><span class="lab">← Previous</span><b>Lumen</b></a>
-<a href="digflow.html" style="text-align:right"><span class="lab">Next →</span><b>DigFlow</b></a></nav>
+<a href="astery-gate.html" style="text-align:right"><span class="lab">Next →</span><b>Astery Gate</b></a></nav>
 </main>
 <footer class="site"><div class="wrap"><span>Saika · Ying Luo · 2026</span><span>Gameplay loops are recorded in-engine from the games themselves.</span></div></footer>
 <script src="../assets/site.js"></script></body></html>
