@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SnowTurf — play</title>
+<style>
+html,body{margin:0;height:100%;background:#07080B;overflow:hidden;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+#unity-canvas{width:100%;height:100%;display:block;background:#07080B;outline:none}
+#load{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#878E99;font-size:13px;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+#bar{width:min(260px,60vw);height:2px;background:#1C2027}#bar i{display:block;height:100%;width:0;background:#5FE3A8;transition:width .2s}
+</style></head>
+<body>
+<canvas id="unity-canvas" tabindex="-1"></canvas>
+<div id="load"><span>Loading SnowTurf</span><div id="bar"><i></i></div></div>
+<script src="Build/SnowTurf.loader.js"></script>
+<script>
+var c=document.getElementById('unity-canvas'), bar=document.querySelector('#bar i'), load=document.getElementById('load');
+createUnityInstance(c,{dataUrl:"Build/SnowTurf.data",frameworkUrl:"Build/SnowTurf.framework.js",codeUrl:"Build/SnowTurf.wasm",streamingAssetsUrl:"StreamingAssets",companyName:"Saika",productName:"SnowTurf",productVersion:"1.0"},
+ function(p){bar.style.width=Math.round(p*100)+'%';}).then(function(){load.remove();c.focus();}).catch(function(m){load.querySelector('span').textContent='Could not start: '+m;});
+c.addEventListener('pointerdown',function(){c.focus();});
+</script>
+</body></html>
