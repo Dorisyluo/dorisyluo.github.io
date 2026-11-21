@@ -10,10 +10,10 @@ html,body{margin:0;height:100%;background:#07080B;overflow:hidden;font-family:sy
 <body>
 <canvas id="unity-canvas" tabindex="-1"></canvas>
 <div id="load"><span>Loading Snowball</span><div id="bar"><i></i></div></div>
-<script src="Build/Snowball.loader.js"></script>
+<script src="Build/SnowTurf.loader.js"></script>
 <script>
 var c=document.getElementById('unity-canvas'), bar=document.querySelector('#bar i'), load=document.getElementById('load');
-createUnityInstance(c,{dataUrl:"Build/Snowball.data",frameworkUrl:"Build/Snowball.framework.js",codeUrl:"Build/Snowball.wasm",streamingAssetsUrl:"StreamingAssets",companyName:"Saika",productName:"Snowball",productVersion:"1.0"},
+createUnityInstance(c,{dataUrl:"Build/SnowTurf.data",frameworkUrl:"Build/SnowTurf.framework.js",codeUrl:"Build/SnowTurf.wasm",streamingAssetsUrl:"StreamingAssets",companyName:"Saika",productName:"Snowball",productVersion:"1.0"},
  function(p){bar.style.width=Math.round(p*100)+'%';}).then(function(){load.remove();c.focus();}).catch(function(m){load.querySelector('span').textContent='Could not start: '+m;});
 c.addEventListener('pointerdown',function(){c.focus();});
 </script>
